@@ -5,11 +5,19 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] public float velocity = -5.0f;
+
+    [SerializeField] public float velocityInc = -0.5f;
+
+    [SerializeField] public float timeToInc = 5.0f;
     
     public static GameManager instance;
 
     private void Awake() {
         instance = this;
+    }
+
+    private void IncVelocity() {
+        velocity += velocityInc;
     }
 
     private void Start() {
@@ -21,6 +29,8 @@ public class GameManager : MonoBehaviour
         if(soulColorInt >= 0) {
             pcs?.SetSoulColor((SoulColor)soulColorInt);
         }
+
+        InvokeRepeating("IncVelocity", timeToInc, timeToInc);
 
     }
 }
