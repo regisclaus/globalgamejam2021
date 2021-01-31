@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     private void Start() {
 
-        PlayerPrefs.SetInt("soulColor", 1);
+        PlayerPrefs.SetInt("soulColor", 2);
         PlayerChangeSoul pcs = FindObjectOfType<PlayerChangeSoul>();
         int soulColorInt = PlayerPrefs.GetInt("soulColor");
         if(soulColorInt >= 0) {
