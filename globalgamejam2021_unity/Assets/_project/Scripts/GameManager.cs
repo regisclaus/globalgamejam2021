@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] public float velocity = -5.0f;
     
     public static GameManager instance;
 

@@ -14,11 +14,12 @@ public class PlayerChangeSoul : MonoBehaviour
     [SerializeField] private GameObject emptyBodyPrefab;
     [SerializeField] private GameObject soulPrefab;
 
-    [SerializeField] private GameObject body;
+    [SerializeField] public GameObject body;
 
-    private GameObject soulObj;
+    [SerializeField] public Transform soulTransform;
 
-    private Animator animator;
+    private Soul soulObj;
+    public Animator animator;
 
     private void Awake() {
         animator = GetComponent<Animator>();
@@ -30,8 +31,8 @@ public class PlayerChangeSoul : MonoBehaviour
 
     public void SetSoulColor(SoulColor soulColor) {
 
-        soulObj = Instantiate(soulPrefab, this.transform.position + Vector3.up, this.transform.rotation);
-        soulObj.GetComponent<Soul>().SetParticleByColor(soulColor);
+        soulObj = Instantiate(soulPrefab, this.transform.position + Vector3.up, this.transform.rotation).GetComponent<Soul>();
+        soulObj.GetComponent<Soul>().SetParticleByColor(soulColor, this);
 
         soulObj.transform.SetParent(this.transform);
 
@@ -57,8 +58,9 @@ public class PlayerChangeSoul : MonoBehaviour
 
                 soulObj.transform.SetParent(null);
                 // Move a alma até o corpo vazio
-                soulObj.transform.DOMove(hit.transform.position + Vector3.up, 0.5f).OnComplete(() => RiseNewBody(hit));
+                // soulObj.transform.DOMove(hit.transform.position + Vector3.up, 0.5f).OnComplete(() => RiseNewBody(hit));
 
+                soulObj.MoveSoul(hit.transform, soulObj.transform.position);
 
                 // Cria corpo vazio
                 Instantiate(emptyBodyPrefab, this.transform.position, this.transform.rotation);
@@ -66,23 +68,5 @@ public class PlayerChangeSoul : MonoBehaviour
                 body.SetActive(false);
             }
         }
-    }
-
-    private void RiseNewBody(RaycastHit hit)
-    {
-        body.SetActive(true);
-
-        this.transform.position = hit.transform.position;
-
-        gameObject.GetComponent<PlayerMove>().line = hit.transform.gameObject.GetComponent<EmptyBody>().line;
-        // Destroi corpo vazio
-        Destroy(hit.transform.gameObject);
-
-        // Animação de levantar
-        animator.SetTrigger("Up");
-
-        soulObj.transform.SetParent(this.transform);
-
-
     }
 }

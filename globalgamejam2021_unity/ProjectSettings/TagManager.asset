@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - LimitEnd
+  - LimitBegin
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - Ground
   - EmptyBody
   - Player
-  - 
+  - LimitNode
   - 
   - 
   - 

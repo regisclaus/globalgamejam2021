@@ -56,6 +56,10 @@ MonoBehaviour:
   - {fileID: 83163689475430230}
   - {fileID: 83163689988392208}
   - {fileID: 5754614960985949877}
+  emptyBodyTransform: {fileID: 0}
+  startMarker: {fileID: 0}
+  endMarker: {fileID: 0}
+  speed: 10
 --- !u!1001 &83163687995010998
 PrefabInstance:
   m_ObjectHideFlags: 0
