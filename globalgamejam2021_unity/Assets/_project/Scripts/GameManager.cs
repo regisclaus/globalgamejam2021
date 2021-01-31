@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     private void Start() {
 
+        // Setar Alma
         PlayerPrefs.SetInt("soulColor", 2);
         PlayerChangeSoul pcs = FindObjectOfType<PlayerChangeSoul>();
         int soulColorInt = PlayerPrefs.GetInt("soulColor");

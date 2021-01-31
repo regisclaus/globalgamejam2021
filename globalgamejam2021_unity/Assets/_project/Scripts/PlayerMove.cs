@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField] private float deltaMove = 3f;
     [SerializeField] private float timeMove = 0.5f;
-    private Line line = Line.MID;
+    public Line line = Line.MID;
 
     private void OnMove(InputValue input) {
         if(!DOTween.IsTweening(this.transform)) {

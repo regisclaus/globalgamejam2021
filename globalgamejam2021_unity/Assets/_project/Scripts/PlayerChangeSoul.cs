@@ -59,6 +59,7 @@ public class PlayerChangeSoul : MonoBehaviour
                 // Move a alma até o corpo vazio
                 soulObj.transform.DOMove(hit.transform.position + Vector3.up, 0.5f).OnComplete(() => RiseNewBody(hit));
 
+
                 // Cria corpo vazio
                 Instantiate(emptyBodyPrefab, this.transform.position, this.transform.rotation);
 
@@ -73,6 +74,7 @@ public class PlayerChangeSoul : MonoBehaviour
 
         this.transform.position = hit.transform.position;
 
+        gameObject.GetComponent<PlayerMove>().line = hit.transform.gameObject.GetComponent<EmptyBody>().line;
         // Destroi corpo vazio
         Destroy(hit.transform.gameObject);
 
@@ -80,5 +82,7 @@ public class PlayerChangeSoul : MonoBehaviour
         animator.SetTrigger("Up");
 
         soulObj.transform.SetParent(this.transform);
+
+
     }
 }
