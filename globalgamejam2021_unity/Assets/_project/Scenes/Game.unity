@@ -175,6 +175,10 @@ MonoBehaviour:
   - {fileID: 6115165375076229800, guid: 9cac385505f511d48a8725f70cbb9730, type: 3}
   - {fileID: 255520623838023728, guid: 0c9ffd3288680114d8157938f069264f, type: 3}
   - {fileID: 2708909934547123705, guid: 37a594f18059d1b48872ee62c08f63a6, type: 3}
+  - {fileID: 1272027268085673603, guid: 07894f58dbbea7d4e931f571e54a5dbc, type: 3}
+  - {fileID: 1429123941807914996, guid: 1d63de09dd7c69043aeb12c981096b41, type: 3}
+  - {fileID: 5678802272797142147, guid: caddff2a49954c94780910e2ba229f49, type: 3}
+  - {fileID: 5315646999797033836, guid: fdb46074d4a3b014eb2e9be9a839d2ed, type: 3}
   playerTransform: {fileID: 4263465168568252077}
 --- !u!65 &240436312
 BoxCollider:
@@ -351,7 +355,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762961479}
-  m_LocalRotation: {x: 0.16471583, y: -0.6915769, z: 0.1667303, w: 0.68322116}
+  m_LocalRotation: {x: 0.16471581, y: -0.6915769, z: 0.16673028, w: 0.68322116}
   m_LocalPosition: {x: 9.66, y: 5.69, z: 9.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -621,7 +625,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217849029}
-  m_LocalRotation: {x: 0.16471583, y: -0.6915769, z: 0.1667303, w: 0.68322116}
+  m_LocalRotation: {x: 0.16471581, y: -0.6915769, z: 0.16673028, w: 0.68322116}
   m_LocalPosition: {x: 9.66, y: 5.69, z: 9.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

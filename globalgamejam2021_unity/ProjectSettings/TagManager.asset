@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LimitEnd
   - LimitBegin
+  - Wall
   layers:
   - Default
   - TransparentFX

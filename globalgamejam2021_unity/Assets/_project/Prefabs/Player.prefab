@@ -1735,6 +1735,7 @@ GameObject:
   - component: {fileID: 775574772}
   - component: {fileID: 1839339288}
   - component: {fileID: 8975304554957259685}
+  - component: {fileID: 3396199814654253789}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -1922,6 +1923,18 @@ MonoBehaviour:
   body: {fileID: 8260514551075039219}
   soulTransform: {fileID: 369802062}
   animator: {fileID: 0}
+--- !u!114 &3396199814654253789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8260514551075050055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8bed7d79eea2954dba5d65ceeb1c8bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8260514551075050953
 GameObject:
   m_ObjectHideFlags: 0
