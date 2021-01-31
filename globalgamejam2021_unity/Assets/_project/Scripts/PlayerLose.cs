@@ -7,13 +7,13 @@ public class PlayerLose : MonoBehaviour
 {
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "Wall") {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            GameManager.instance.LoseGame();
         }
     }
     
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Wall") {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            GameManager.instance.LoseGame();
         }
     }
 }

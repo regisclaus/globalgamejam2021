@@ -21,12 +21,11 @@ public class PlayerChangeSoul : MonoBehaviour
     private Soul soulObj;
     public Animator animator;
 
+    private PlayerEnergy playerEnergy;
+
     private void Awake() {
         animator = GetComponent<Animator>();
-    }
-
-    private void Start() {
-
+        playerEnergy = GetComponent<PlayerEnergy>();
     }
 
     public void SetSoulColor(SoulColor soulColor) {
@@ -62,10 +61,16 @@ public class PlayerChangeSoul : MonoBehaviour
 
                 soulObj.MoveSoul(hit.transform, soulObj.transform.position);
 
+
+
                 // Cria corpo vazio
                 Instantiate(emptyBodyPrefab, this.transform.position, this.transform.rotation);
 
                 body.SetActive(false);
+
+                playerEnergy.RegenEnergyBody();
+
+                playerEnergy.ConsumeSoulEnergy();
             }
         }
     }
