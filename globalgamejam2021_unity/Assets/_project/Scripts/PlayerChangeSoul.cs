@@ -49,6 +49,7 @@ public class PlayerChangeSoul : MonoBehaviour
            
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
         RaycastHit hit;
+        if(Time.timeScale != 0) {
         if (Physics.Raycast(ray, out hit, 100, emptyBodyLayer))
         {
             if(Vector3.Distance(this.transform.position, hit.transform.position) <= range) {
@@ -71,7 +72,10 @@ public class PlayerChangeSoul : MonoBehaviour
                 playerEnergy.RegenEnergyBody();
 
                 playerEnergy.ConsumeSoulEnergy();
+
+                PlayerSounds.instance.ChangeSoul();
             }
+        }
         }
     }
 }

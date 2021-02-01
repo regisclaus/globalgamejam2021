@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerJump : MonoBehaviour
 {
@@ -29,5 +30,6 @@ public class PlayerJump : MonoBehaviour
     {
         animator.SetTrigger("Jump");
         GetComponent<Rigidbody>().AddForce(new Vector3(0, jumpForce, 0));
+        PlayerSounds.instance.Jump();
     }
 }

@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLose : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision other) {
+    private void OnCollisionStay(Collision other) {
         if(other.gameObject.tag == "Wall") {
             GameManager.instance.LoseGame();
         }
     }
     
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerStay(Collider other) {
         if(other.gameObject.tag == "Wall") {
             GameManager.instance.LoseGame();
         }
